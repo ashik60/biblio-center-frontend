@@ -9,7 +9,6 @@ const Checkout = () => {
     const { title, author, price } = book;
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const quantity = 1;
-    const email = "test";
 
     axios
         .get("http://localhost:5055/books/" + id)

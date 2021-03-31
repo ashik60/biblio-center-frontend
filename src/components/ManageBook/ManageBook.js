@@ -23,8 +23,16 @@ const ManageBook = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data) {
-                    const newVolunteers = books.filter((item) => item._id !== id);
-                    setBooks(newVolunteers);
+                    fetch(" http://localhost:5055/books")
+                        .then((res) => res.json())
+                        .then((data) => {
+                            setBooks(data);
+                            console.log(data);
+                        })
+                        .catch((err) => console.log(err));
+                    // console.log(data);
+                    // const newBooks = books.filter((item) => item._id !== id);
+                    // setBooks(newBooks);
                 }
             });
     };
