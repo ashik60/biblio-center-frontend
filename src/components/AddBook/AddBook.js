@@ -51,7 +51,7 @@ const AddBook = () => {
             {/* <Link to="/" className="btn btn-primary">
                 Go Home
             </Link> */}
-            <h4>Add Event</h4>
+            <h4>Add Book</h4>
             <form onSubmit={handleAddBook}>
                 <div className="row mb-5">
                     <div className="col">
@@ -105,7 +105,7 @@ const AddBook = () => {
                         </div>
                     </div>
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary float-right">
                     Submit
                 </button>
             </form>

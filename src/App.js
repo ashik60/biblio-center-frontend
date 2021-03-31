@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Admin from "./components/Admin/Admin";
 import Checkout from "./components/Checkout/Checkout";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -34,6 +35,9 @@ function App() {
                     </PrivateRoute>
                     <PrivateRoute path="/orders">
                         <Orders />
+                    </PrivateRoute>
+                    <PrivateRoute path="/admin">
+                        <Admin />
                     </PrivateRoute>
                     <Route path="*">
                         <NoMatch />
