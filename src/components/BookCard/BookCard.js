@@ -9,20 +9,16 @@ const BookCard = (props) => {
             <img
                 src={imgURL}
                 className="card-img-top mx-auto img-fluid d-block mt-3"
-                style={{ width: "8rem" }}
+                style={{ width: "8rem", height: "10rem" }}
                 alt="..."
             ></img>
             <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{author}</p>
-                <h4 className="card-text float-left">${price}</h4>
+                <h5 className="card-title text-left">{title}</h5>
+                <p className="card-text text-left">{author}</p>
+                <h4 className="card-text color-primary float-left">${price}</h4>
                 <Link to={"/checkout/" + _id} className="btn btn-primary float-right">
                     Buy Now
                 </Link>
-
-                {/* <Link to={"/teamdetails/" + _id} className="btn btn-success">
-                    Explore
-                </Link> */}
             </div>
         </div>
     );

@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Admin from "./components/Admin/Admin";
 import Checkout from "./components/Checkout/Checkout";
-import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import NoMatch from "./components/NoMatch/NoMatch";
@@ -18,8 +17,6 @@ function App() {
     return (
         <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
             <Router>
-                <Header></Header>
-
                 <Switch>
                     <Route exact path="/">
                         <Home />

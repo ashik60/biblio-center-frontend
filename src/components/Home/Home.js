@@ -1,15 +1,12 @@
 import React from "react";
-import AddBook from "../AddBook/AddBook";
 import BookList from "../BookList/BookList";
+import Header from "../Header/Header";
 
 const Home = () => {
     return (
         <div>
-            {/* <Header></Header> */}
+            <Header></Header>
             <BookList></BookList>
-            <div className="container">
-                <AddBook />
-            </div>
         </div>
     );
 };

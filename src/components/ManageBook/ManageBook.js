@@ -4,7 +4,7 @@ const ManageBook = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch(" http://localhost:5055/books")
+        fetch("https://mighty-badlands-60955.herokuapp.com/books")
             .then((res) => res.json())
             .then((data) => {
                 setBooks(data);
@@ -14,7 +14,7 @@ const ManageBook = () => {
     }, []);
 
     const handleDelete = (id) => {
-        fetch("http://localhost:5055/deleteBook/" + id, {
+        fetch("https://mighty-badlands-60955.herokuapp.com/deleteBook/" + id, {
             method: "DELETE",
             headers: {
                 "Content-type": "application/json",
@@ -23,23 +23,20 @@ const ManageBook = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data) {
-                    fetch(" http://localhost:5055/books")
+                    fetch("https://mighty-badlands-60955.herokuapp.com/books")
                         .then((res) => res.json())
                         .then((data) => {
                             setBooks(data);
                             console.log(data);
                         })
                         .catch((err) => console.log(err));
-                    // console.log(data);
-                    // const newBooks = books.filter((item) => item._id !== id);
-                    // setBooks(newBooks);
                 }
             });
     };
 
     return (
         <div>
-            <h1>Manage Book</h1>
+            <h1 className="mt-3">Manage Book</h1>
             <div className="shadow p-2 rounded">
                 <table className="table  table-hover">
                     <thead>

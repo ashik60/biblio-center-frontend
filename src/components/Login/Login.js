@@ -3,6 +3,7 @@ import "firebase/auth";
 import React, { useContext } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { UserContext } from "../../App";
+import Header from "../Header/Header";
 import firebaseConfig from "./firebase.config";
 
 if (!firebase.apps.length) {
@@ -36,33 +37,36 @@ const Login = () => {
     };
 
     return (
-        <div className="mt-5">
-            <div
-                style={{
-                    width: "28rem",
-                    paddingLeft: "20px",
-                    paddingRight: "20px",
-                    paddingTop: "120px",
-                    paddingBottom: "120px",
-                }}
-                className="card mx-auto text-center"
-            >
-                <div>
-                    <h4 className="mb-5">Login</h4>
-                    <button
-                        onClick={signInWithGoogle}
-                        style={{ borderRadius: "50px" }}
-                        className="btn btn-outline-dark btn-block text-left"
-                    >
-                        {" "}
-                        <img
-                            style={{ marginRight: "85px" }}
-                            height="30px"
-                            src={"https://i.ibb.co/CPGpPDg/google.png"}
-                            alt="GOOGLE"
-                        ></img>
-                        <span>Continue with Google</span>
-                    </button>
+        <div className="">
+            <Header></Header>
+            <div className="mt-5">
+                <div
+                    style={{
+                        width: "28rem",
+                        paddingLeft: "20px",
+                        paddingRight: "20px",
+                        paddingTop: "120px",
+                        paddingBottom: "120px",
+                    }}
+                    className="card mx-auto text-center"
+                >
+                    <div>
+                        <h4 className="mb-5">Login</h4>
+                        <button
+                            onClick={signInWithGoogle}
+                            style={{ borderRadius: "50px" }}
+                            className="btn btn-outline-dark btn-block text-left"
+                        >
+                            {" "}
+                            <img
+                                style={{ marginRight: "85px" }}
+                                height="30px"
+                                src={"https://i.ibb.co/CPGpPDg/google.png"}
+                                alt="GOOGLE"
+                            ></img>
+                            <span>Continue with Google</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
